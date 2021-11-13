@@ -48,27 +48,27 @@ MonoBehaviour:
     <ActionNode id=\"5\" />\r\n          <ActionNode id=\"6\" />\r\n          <SequenceNode
     id=\"7\" />\r\n          <RepeatDecorator id=\"8\" />\r\n        </nodes>\r\n     
     </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"8\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"210.5285 206.4645\" name=\"Repeat\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"154.991 225.8808\" name=\"Repeat\"
     description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"8\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode id=\"7\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"202.7509
-    368.6868\" name=\"Sequence\" description=\"Executes all its children in sequence
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"147.2134
+    388.1035\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"7\" />\r\n         
     <RepeatDecorator id=\"8\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <ActionNode id=\"5\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"68.30624 564.3539\" name=\"Vector3/GetRandomInArea\" description=\"Gets
+    position=\"12.76884 583.771\" name=\"Vector3/GetRandomInArea\" description=\"Gets
     a random position from a given area\" cardinality=\"0\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <ActionNode id=\"5\" />\r\n          <SequenceNode
     id=\"7\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
     <ActionNode id=\"6\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"286.4018 562.4965\" name=\"Navigation/MoveToPosition\" description=\"Moves
+    position=\"230.8642 581.9136\" name=\"Navigation/MoveToPosition\" description=\"Moves
     the game object to a given position by using a NavMeshAgent\" cardinality=\"0\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
     id=\"6\" />\r\n          <SequenceNode id=\"7\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
-  zoom: 0.7
+  zoom: 0.8
   subslist:
   - {fileID: 11400000}
   _guid: 9efcdebb55c03cd4098c14bdfe508ada
