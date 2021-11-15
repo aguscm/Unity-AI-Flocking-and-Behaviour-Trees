@@ -19,9 +19,9 @@ public class Flock : MonoBehaviour {
     void Update() {
 
         // Determine the bounding box of the manager cube
-        Bounds b = new Bounds(myManager.transform.position, myManager.swimLimits * 2.0f);
+        Bounds b = new Bounds(myManager.transform.position, myManager.movingLimits * 2.0f);
 
-        // If the fish is outside the bounds of the cube or about to hit something
+        // If the object is outside the bounds of the cube or about to hit something
         // then start turning around
         RaycastHit hit = new RaycastHit();
         Vector3 direction = Vector3.zero;
@@ -68,7 +68,7 @@ public class Flock : MonoBehaviour {
     void ApplyRules() {
 
         GameObject[] gos;
-        gos = myManager.allFish;
+        gos = myManager.allObjectsInFlock;
 
         Vector3 vcentre = Vector3.zero;
         Vector3 vavoid = Vector3.zero;

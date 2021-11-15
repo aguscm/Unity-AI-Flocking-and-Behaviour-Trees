@@ -819,10 +819,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11e98a9a442f364419e8cd43b1d5ddae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fishPrefab: {fileID: 8955428774009595110, guid: ec4e23cda89d8dc4098e5960725f3958, type: 3}
-  numFish: 20
-  allFish: []
-  swimLimits: {x: 1, y: 1, z: 1}
+  Prefab: {fileID: 0}
+  ObjectTag: Bee
+  numObjectsOfFlock: 20
+  allObjectsInFlock: []
+  movingLimits: {x: 5, y: 5, z: 5}
   goalPos: {x: 0, y: 0, z: 0}
   minSpeed: 1.88
   maxSpeed: 3.08
@@ -836,7 +837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561800265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.14, y: 3.23, z: -9.15}
+  m_LocalPosition: {x: -5.26, y: 3.23, z: -14.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1657189070}
@@ -3314,7 +3315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440726259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.471, y: 1.27, z: -14.452}
+  m_LocalPosition: {x: 12.28, y: 1.69, z: -23.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224985129}
@@ -3363,8 +3364,10 @@ MonoBehaviour:
     colorParamsLostDefaultValue: 
     objectParams:
     - {fileID: 747585204}
+    - {fileID: 561800266}
     objectParamsNames:
     - wanderArea
+    - flock manager
     objectParamsLostDefaultValue: 
     layerMaskParams: []
     layerMaskParamsNames: []

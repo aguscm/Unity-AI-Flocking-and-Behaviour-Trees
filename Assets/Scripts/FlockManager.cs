@@ -2,19 +2,21 @@
 
 public class FlockManager : MonoBehaviour {
 
-    // Access the fish prefab
-    public GameObject fishPrefab;
-    // Starting number of fish
-    public int numFish = 20;
-    // Array of fish prefabs
-    public GameObject[] allFish;
-    // Swimming bounds for fish
-    public Vector3 swimLimits = new Vector3(5.0f, 5.0f, 5.0f);
+    // Access the object prefab
+    public GameObject Prefab;
+    public string ObjectTag;
+    
+    // Number of objects that are going to be instantiated
+    public int numObjectsOfFlock = 20;
+    // Array of prefabs
+    public GameObject[] allObjectsInFlock;
+    // Flying bounds
+    public Vector3 movingLimits = new Vector3(5.0f, 5.0f, 5.0f);
     // Goal position
     public Vector3 goalPos;
 
-    // Header title for Unity Editor
-    [Header("Fish Settings")]
+
+    [Header("Object Settings")]
     [Range(0.0f, 5.0f)]
     public float minSpeed;          // Minimum speed range
     [Range(0.0f, 5.0f)]
@@ -26,20 +28,21 @@ public class FlockManager : MonoBehaviour {
 
     void Start() {
 
-        // Allocate the allFish array
-        allFish = new GameObject[numFish];
-        // Loop throught the array instantiating the prefabs.  In this case fish
-        for (int i = 0; i < numFish; ++i) {
+        // Allocate the allObjectsInFlock array
+        allObjectsInFlock = new GameObject[numObjectsOfFlock];
+        // Loop throught the array instantiating the prefabs.
+        for (int i = 0; i < numObjectsOfFlock; ++i) {
 
-            Vector3 pos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
-                                                                Random.Range(-swimLimits.x, swimLimits.x),
-                                                                Random.Range(-swimLimits.x, swimLimits.x));
-            allFish[i] = (GameObject)Instantiate(fishPrefab, pos, Quaternion.identity);
-            allFish[i].GetComponent<Flock>().myManager = this;
+
+            allObjectsInFlock[i] = InstantiateObject();
+            allObjectsInFlock[i].GetComponent<Flock>().myManager = this;
         }
 
         // Target for the prefbas to head for
         goalPos = this.transform.position;
+
+        //Instantiates a new gameobject in seconds
+        //InvokeRepeating("InstantiateObject", 20f, 20f);
     }
 
     // Update is called once per frame
@@ -47,9 +50,23 @@ public class FlockManager : MonoBehaviour {
 
         // Update the target for the prefabs to head for with a random chance
         if (Random.Range(0.0f, 100.0f) < 10.0f) {
-            goalPos = this.transform.position + new Vector3(Random.Range(-swimLimits.x, swimLimits.x),
-                                                            Random.Range(-swimLimits.x, swimLimits.x),
-                                                            Random.Range(-swimLimits.x, swimLimits.x));
+            goalPos = this.transform.position + new Vector3(Random.Range(-movingLimits.x, movingLimits.x),
+                                                            Random.Range(-movingLimits.x, movingLimits.x),
+                                                            Random.Range(-movingLimits.x, movingLimits.x));
         }
+    }
+
+    GameObject InstantiateObject()
+    {
+        Vector3 pos = this.transform.position + new Vector3(Random.Range(-movingLimits.x, movingLimits.x),
+                                                    Random.Range(-movingLimits.x, movingLimits.x),
+                                                    Random.Range(-movingLimits.x, movingLimits.x));
+
+        return (GameObject)Instantiate(Prefab, pos, Quaternion.identity);
+    }
+
+    public void ResortArray()
+    {
+        allObjectsInFlock = GameObject.FindGameObjectsWithTag(ObjectTag);
     }
 }
