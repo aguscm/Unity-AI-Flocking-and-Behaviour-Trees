@@ -334,7 +334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &85967428
 AudioListener:
   m_ObjectHideFlags: 0
@@ -394,7 +394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85967427}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 22.2, y: 2.02, z: -6.92}
+  m_LocalPosition: {x: 2.8, y: 3.49, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -916,7 +916,7 @@ MonoBehaviour:
   ObjectTag: Bee
   numObjectsOfFlock: 20
   allObjectsInFlock: []
-  movingLimits: {x: 5, y: 5, z: 5}
+  movingLimits: {x: 2, y: 2, z: 2}
   goalPos: {x: 0, y: 0, z: 0}
   minSpeed: 1.88
   maxSpeed: 3.08
@@ -2117,7 +2117,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
