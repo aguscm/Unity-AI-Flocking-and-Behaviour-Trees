@@ -41,8 +41,6 @@ public class FlockManager : MonoBehaviour {
         // Target for the prefbas to head for
         goalPos = this.transform.position;
 
-        //Instantiates a new gameobject in seconds
-        //InvokeRepeating("InstantiateObject", 20f, 20f);
     }
 
     // Update is called once per frame
@@ -53,6 +51,20 @@ public class FlockManager : MonoBehaviour {
             goalPos = this.transform.position + new Vector3(Random.Range(-movingLimits.x, movingLimits.x),
                                                             Random.Range(-movingLimits.x, movingLimits.x),
                                                             Random.Range(-movingLimits.x, movingLimits.x));
+        }
+
+        //If there are less objects in the flock than the stantard number,
+        //We instantiate the object a number of times util it is equal to the standard
+        if (allObjectsInFlock.Length < numObjectsOfFlock)
+        {
+            var objectsToCreate = numObjectsOfFlock - allObjectsInFlock.Length;
+
+            for (var i = 0; i < objectsToCreate; i++ )
+            {
+                InstantiateObject();
+            }
+            //Resorts the array
+            ResortArray();
         }
     }
 

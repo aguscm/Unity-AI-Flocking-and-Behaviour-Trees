@@ -36,16 +36,16 @@ MonoBehaviour:
     <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n    <SubbehaviorNode
     id=\"36\">\r\n      <_guid>9efcdebb55c03cd4098c14bdfe508ada</_guid>\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"wanderArea\"
-    type=\"UnityEngine.GameObject\" isBlackboard=\"False\" />\r\n        </inputValues>\r\n     
-    </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
-    <entry name=\"wanderTarget\" type=\"UnityEngine.Vector3\" isBlackboard=\"True\"
-    />\r\n        </outputValues>\r\n      </outputParams>\r\n      <localParams
-    />\r\n    </SubbehaviorNode>\r\n    <SequenceNode id=\"6\">\r\n      <children>\r\n       
-    <elem>\r\n          <ActionNode id=\"9\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <RepeatDecorator id=\"26\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <ActionNode id=\"30\" />\r\n        </elem>\r\n      </children>\r\n      <inputParams
-    />\r\n      <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n   
-    <ActionNode id=\"9\" action=\"Custom/FindGameObjectRandomlyWithTag\">\r\n     
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"wanderArea\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
+    <outputValues>\r\n          <entry name=\"wanderTarget\" type=\"UnityEngine.Vector3\"
+    isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </SubbehaviorNode>\r\n    <SequenceNode id=\"6\">\r\n     
+    <children>\r\n        <elem>\r\n          <ActionNode id=\"9\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <RepeatDecorator id=\"26\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"30\" />\r\n        </elem>\r\n     
+    </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SequenceNode>\r\n    <ActionNode id=\"9\" action=\"Custom/FindGameObjectRandomlyWithTag\">\r\n     
     <inputParams>\r\n        <inputValues>\r\n          <entry name=\"Tag\" type=\"System.String\"
     isBlackboard=\"True\" blackboard=\"Tag\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams>\r\n        <outputValues>\r\n         
@@ -79,41 +79,41 @@ MonoBehaviour:
     <RepeatDecorator id=\"17\" />\r\n          <RepeatDecorator id=\"26\" />\r\n         
     <ActionNode id=\"30\" />\r\n          <SubbehaviorNode id=\"36\" />\r\n       
     </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"17\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"385.05
-    463.5\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"357.05
+    619.5\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
     cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree id=\"23\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode id=\"25\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"373.05
-    645.5\" name=\"Sequence\" description=\"Executes all its children in sequence
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"345.05
+    801.5\" name=\"Sequence\" description=\"Executes all its children in sequence
     until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"23\" />\r\n          <RepeatDecorator id=\"17\" />\r\n         
     <RepeatDecorator id=\"17\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
     <SubbehaviorNode id=\"36\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
-    selected=\"False\" position=\"272 820\" name=\"Wander\" description=\"\" cardinality=\"-1\"
+    selected=\"False\" position=\"244 976\" name=\"Wander\" description=\"\" cardinality=\"-1\"
     hasParent=\"True\">\r\n          <BehaviorTree id=\"23\" />\r\n          <SubbehaviorNode
     id=\"36\" />\r\n          <SequenceNode id=\"25\" />\r\n        </data>\r\n     
     </_data>\r\n    </SubbehaviorNode>\r\n    <SequenceNode id=\"6\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"430.7167 821.5\" name=\"Sequence\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"402.7167 977.5\" name=\"Sequence\"
     description=\"Executes all its children in sequence until all of them are successful\"
     cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"23\" />\r\n         
     <SequenceNode id=\"25\" />\r\n          <SequenceNode id=\"25\" />\r\n       
     </data>\r\n      </_data>\r\n    </SequenceNode>\r\n    <ActionNode id=\"9\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"-6.949997
-    1091.5\" name=\"Custom/FindGameObjectRandomlyWithTag\" description=\"Gets a bee
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"-34.95
+    1247.5\" name=\"Custom/FindGameObjectRandomlyWithTag\" description=\"Gets a bee
     randomly\" cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"23\"
     />\r\n          <ActionNode id=\"9\" />\r\n          <SequenceNode id=\"6\" />\r\n       
     </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <RepeatDecorator id=\"26\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"419.25
-    1105.5\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"391.25
+    1261.5\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
     cardinality=\"1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"23\" />\r\n         
     <RepeatDecorator id=\"26\" />\r\n          <SequenceNode id=\"6\" />\r\n       
     </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <ActionNode id=\"30\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"665.25
-    1123.5\" name=\"Custom/DestroyAndResortArray\" description=\"Destroys the gameobject\"
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"637.25
+    1279.5\" name=\"Custom/DestroyAndResortArray\" description=\"Destroys the gameobject\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"23\" />\r\n         
     <ActionNode id=\"30\" />\r\n          <SequenceNode id=\"6\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"21\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"True\" position=\"349.05 1253.5\" name=\"Custom/MoveCloseToGameObject\"
+    <data breakpoint=\"0\" selected=\"False\" position=\"321.05 1409.5\" name=\"Custom/MoveCloseToGameObject\"
     description=\"Moves the game object towards a given target by using a NavMeshAgent\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"23\" />\r\n         
     <ActionNode id=\"21\" />\r\n          <RepeatDecorator id=\"26\" />\r\n       

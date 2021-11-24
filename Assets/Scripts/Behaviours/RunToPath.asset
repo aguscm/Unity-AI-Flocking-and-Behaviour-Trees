@@ -15,7 +15,7 @@ MonoBehaviour:
   brickName: Assets/Scripts/Behaviours/RunToPath.asset
   xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
     version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
-    id=\"0\" guid=\"5b423db613461cb41aa5ac502e2daf85\" nextId=\"18\">\r\n      <root>\r\n       
+    id=\"0\" guid=\"5b423db613461cb41aa5ac502e2daf85\" nextId=\"22\">\r\n      <root>\r\n       
     <RepeatDecorator id=\"17\" />\r\n      </root>\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"target1\" type=\"UnityEngine.GameObject\"
     isBlackboard=\"False\" />\r\n          <entry name=\"target2\" type=\"UnityEngine.GameObject\"
@@ -26,69 +26,72 @@ MonoBehaviour:
     id=\"17\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
     <SequenceNode id=\"16\" />\r\n      </child>\r\n      <inputParams />\r\n     
     <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <SequenceNode
-    id=\"16\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode id=\"7\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"8\" />\r\n       
-    </elem>\r\n        <elem>\r\n          <ActionNode id=\"9\" />\r\n        </elem>\r\n       
-    <elem>\r\n          <ActionNode id=\"10\" />\r\n        </elem>\r\n      </children>\r\n     
+    id=\"16\">\r\n      <children>\r\n        <elem>\r\n          <ActionNode id=\"18\"
+    />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"19\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"20\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"21\" />\r\n        </elem>\r\n      </children>\r\n     
     <inputParams />\r\n      <outputParams />\r\n      <localParams />\r\n    </SequenceNode>\r\n   
-    <ActionNode id=\"7\" action=\"Navigation/MoveToGameObject\">\r\n      <inputParams>\r\n       
+    <ActionNode id=\"18\" action=\"Custom/MoveCloseToGameObject\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"target1\" />\r\n        </inputValues>\r\n     
+    isBlackboard=\"True\" blackboard=\"target1\" />\r\n          <entry name=\"distanceToObjectUntilSuccess\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"8\" action=\"Navigation/MoveToGameObject\">\r\n      <inputParams>\r\n       
+    <ActionNode id=\"19\" action=\"Custom/MoveCloseToGameObject\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"target2\" />\r\n        </inputValues>\r\n     
+    isBlackboard=\"True\" blackboard=\"target2\" />\r\n          <entry name=\"distanceToObjectUntilSuccess\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"9\" action=\"Navigation/MoveToGameObject\">\r\n      <inputParams>\r\n       
+    <ActionNode id=\"20\" action=\"Custom/MoveCloseToGameObject\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"target3\" />\r\n        </inputValues>\r\n     
+    isBlackboard=\"True\" blackboard=\"target3\" />\r\n          <entry name=\"distanceToObjectUntilSuccess\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"10\" action=\"Navigation/MoveToGameObject\">\r\n      <inputParams>\r\n       
+    <ActionNode id=\"21\" action=\"Custom/MoveCloseToGameObject\">\r\n      <inputParams>\r\n       
     <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
-    isBlackboard=\"True\" blackboard=\"target4\" />\r\n        </inputValues>\r\n     
+    isBlackboard=\"True\" blackboard=\"target4\" />\r\n          <entry name=\"distanceToObjectUntilSuccess\"
+    type=\"System.Single\" isBlackboard=\"False\" value=\"2\" />\r\n        </inputValues>\r\n     
     </inputParams>\r\n      <outputParams />\r\n      <localParams />\r\n    </ActionNode>\r\n 
     </runtimeInfo>\r\n  <editorInfo>\r\n    <BehaviorTree id=\"0\" _name=\"RunToPath4\"
     _description=\"\" _removeIfClosed=\"False\">\r\n      <_rootList>\r\n       
-    <elem>\r\n          <ActionNode id=\"7\" />\r\n        </elem>\r\n        <elem>\r\n         
-    <ActionNode id=\"8\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
-    id=\"9\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"10\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode id=\"16\"
-    />\r\n        </elem>\r\n        <elem>\r\n          <RepeatDecorator id=\"17\"
+    <elem>\r\n          <SequenceNode id=\"16\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <RepeatDecorator id=\"17\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"18\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"19\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode
+    id=\"20\" />\r\n        </elem>\r\n        <elem>\r\n          <ActionNode id=\"21\"
     />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n        <nodes>\r\n         
-    <ActionNode id=\"10\" />\r\n          <ActionNode id=\"9\" />\r\n          <ActionNode
-    id=\"8\" />\r\n          <ActionNode id=\"7\" />\r\n          <SequenceNode id=\"16\"
-    />\r\n          <RepeatDecorator id=\"17\" />\r\n        </nodes>\r\n      </_nodes>\r\n   
-    </BehaviorTree>\r\n    <RepeatDecorator id=\"17\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"False\" position=\"960 -2\" name=\"Repeat\"
-    description=\"Repeats the execution of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator id=\"17\" />\r\n       
-    </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n    <SequenceNode id=\"16\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"942 180\"
-    name=\"Sequence\" description=\"Executes all its children in sequence until all
-    of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <ActionNode id=\"19\" />\r\n          <ActionNode id=\"20\" />\r\n          <ActionNode
+    id=\"21\" />\r\n          <SequenceNode id=\"16\" />\r\n          <RepeatDecorator
+    id=\"17\" />\r\n          <ActionNode id=\"18\" />\r\n        </nodes>\r\n     
+    </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator id=\"17\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"440 498\"
+    name=\"Repeat\" description=\"Repeats the execution of its child node\" cardinality=\"1\"
+    hasParent=\"False\">\r\n          <BehaviorTree id=\"0\" />\r\n          <RepeatDecorator
+    id=\"17\" />\r\n        </data>\r\n      </_data>\r\n    </RepeatDecorator>\r\n   
+    <SequenceNode id=\"16\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"430 682\" name=\"Sequence\" description=\"Executes all its children
+    in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
     <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"16\" />\r\n         
     <RepeatDecorator id=\"17\" />\r\n        </data>\r\n      </_data>\r\n    </SequenceNode>\r\n   
-    <ActionNode id=\"7\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"387.276 359.25\" name=\"Navigation/MoveToGameObject\" description=\"Moves
+    <ActionNode id=\"18\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"14 1082\" name=\"Custom/MoveCloseToGameObject\" description=\"Moves
     the game object towards a given target by using a NavMeshAgent\" cardinality=\"0\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
-    id=\"16\" />\r\n          <SequenceNode id=\"16\" />\r\n        </data>\r\n     
-    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"8\">\r\n      <_data>\r\n       
-    <data breakpoint=\"0\" selected=\"True\" position=\"638.5261 441\" name=\"Navigation/MoveToGameObject\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"18\" />\r\n          <SequenceNode id=\"16\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"19\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"256 982\" name=\"Custom/MoveCloseToGameObject\"
     description=\"Moves the game object towards a given target by using a NavMeshAgent\"
     cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
-    <SequenceNode id=\"16\" />\r\n          <SequenceNode id=\"16\" />\r\n       
-    </data>\r\n      </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"9\">\r\n     
-    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"902.026
-    588.25\" name=\"Navigation/MoveToGameObject\" description=\"Moves the game object
-    towards a given target by using a NavMeshAgent\" cardinality=\"0\" hasParent=\"True\">\r\n         
-    <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"16\" />\r\n         
-    <SequenceNode id=\"16\" />\r\n        </data>\r\n      </_data>\r\n    </ActionNode>\r\n   
-    <ActionNode id=\"10\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
-    position=\"1161.526 463\" name=\"Navigation/MoveToGameObject\" description=\"Moves
-    the game object towards a given target by using a NavMeshAgent\" cardinality=\"0\"
-    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <SequenceNode
-    id=\"16\" />\r\n          <SequenceNode id=\"16\" />\r\n        </data>\r\n     
+    <ActionNode id=\"19\" />\r\n          <SequenceNode id=\"16\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"20\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"474 1082\" name=\"Custom/MoveCloseToGameObject\"
+    description=\"Moves the game object towards a given target by using a NavMeshAgent\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"20\" />\r\n          <SequenceNode id=\"16\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"21\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"636 978\" name=\"Custom/MoveCloseToGameObject\"
+    description=\"Moves the game object towards a given target by using a NavMeshAgent\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"21\" />\r\n          <SequenceNode id=\"16\" />\r\n        </data>\r\n     
     </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
   zoom: 0.5
   subslist: []

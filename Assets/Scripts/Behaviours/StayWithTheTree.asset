@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: StayWithTheTree
+  m_EditorClassIdentifier: 
+  brickName: Assets/Scripts/Behaviours/StayWithTheTree.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\r\n  <BehaviorTree id=\"0\" />\r\n  <runtimeInfo>\r\n    <BehaviorTree
+    id=\"0\" guid=\"f2ce0070c84fd8644882fa83776c9387\" nextId=\"13\">\r\n      <root>\r\n       
+    <RepeatDecorator id=\"1\" />\r\n      </root>\r\n      <inputParams>\r\n       
+    <inputValues>\r\n          <entry name=\"targetToGetCloseTo\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n          <entry name=\"wanderArea\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\r\n        </inputValues>\r\n      </inputParams>\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"1\" loops=\"-1\" policy=\"ContinueWhenChildFails\">\r\n      <child>\r\n       
+    <RandomSequenceNode id=\"12\" />\r\n      </child>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RepeatDecorator>\r\n    <RandomSequenceNode
+    id=\"12\">\r\n      <probs>\r\n        <elem>1</elem>\r\n        <elem>1</elem>\r\n     
+    </probs>\r\n      <children>\r\n        <elem>\r\n          <SubbehaviorNode
+    id=\"4\" />\r\n        </elem>\r\n        <elem>\r\n          <SequenceNode id=\"7\"
+    />\r\n        </elem>\r\n      </children>\r\n      <inputParams />\r\n     
+    <outputParams />\r\n      <localParams />\r\n    </RandomSequenceNode>\r\n   
+    <SubbehaviorNode id=\"4\">\r\n      <_guid>9efcdebb55c03cd4098c14bdfe508ada</_guid>\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"wanderArea\"
+    type=\"UnityEngine.GameObject\" isBlackboard=\"True\" blackboard=\"wanderArea\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams>\r\n       
+    <outputValues>\r\n          <entry name=\"wanderTarget\" type=\"UnityEngine.Vector3\"
+    isBlackboard=\"True\" />\r\n        </outputValues>\r\n      </outputParams>\r\n     
+    <localParams />\r\n    </SubbehaviorNode>\r\n    <SequenceNode id=\"7\">\r\n     
+    <children>\r\n        <elem>\r\n          <ActionNode id=\"11\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <ActionNode id=\"10\" />\r\n        </elem>\r\n     
+    </children>\r\n      <inputParams />\r\n      <outputParams />\r\n      <localParams
+    />\r\n    </SequenceNode>\r\n    <ActionNode id=\"11\" action=\"Custom/MoveCloseToGameObject\">\r\n     
+    <inputParams>\r\n        <inputValues>\r\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"targetToGetCloseTo\" />\r\n          <entry
+    name=\"distanceToObjectUntilSuccess\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"1\" />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams
+    />\r\n      <localParams />\r\n    </ActionNode>\r\n    <ActionNode id=\"10\"
+    action=\"Basic/WaitForSeconds\">\r\n      <inputParams>\r\n        <inputValues>\r\n         
+    <entry name=\"seconds\" type=\"System.Single\" isBlackboard=\"False\" value=\"3\"
+    />\r\n        </inputValues>\r\n      </inputParams>\r\n      <outputParams />\r\n     
+    <localParams />\r\n    </ActionNode>\r\n  </runtimeInfo>\r\n  <editorInfo>\r\n   
+    <BehaviorTree id=\"0\" _name=\"StayWithTheTree\" _description=\"\" _removeIfClosed=\"False\">\r\n     
+    <_rootList>\r\n        <elem>\r\n          <RepeatDecorator id=\"1\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <SubbehaviorNode id=\"4\" />\r\n       
+    </elem>\r\n        <elem>\r\n          <SequenceNode id=\"7\" />\r\n        </elem>\r\n       
+    <elem>\r\n          <ActionNode id=\"10\" />\r\n        </elem>\r\n        <elem>\r\n         
+    <ActionNode id=\"11\" />\r\n        </elem>\r\n        <elem>\r\n          <RandomSequenceNode
+    id=\"12\" />\r\n        </elem>\r\n      </_rootList>\r\n      <_nodes>\r\n       
+    <nodes>\r\n          <RepeatDecorator id=\"1\" />\r\n          <SubbehaviorNode
+    id=\"4\" />\r\n          <SequenceNode id=\"7\" />\r\n          <ActionNode id=\"10\"
+    />\r\n          <ActionNode id=\"11\" />\r\n          <RandomSequenceNode id=\"12\"
+    />\r\n        </nodes>\r\n      </_nodes>\r\n    </BehaviorTree>\r\n    <RepeatDecorator
+    id=\"1\">\r\n      <_data>\r\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"338.7961 439.3573\" name=\"Repeat\" description=\"Repeats the execution
+    of its child node\" cardinality=\"1\" hasParent=\"False\">\r\n          <BehaviorTree
+    id=\"0\" />\r\n          <RepeatDecorator id=\"1\" />\r\n        </data>\r\n     
+    </_data>\r\n    </RepeatDecorator>\r\n    <RandomSequenceNode id=\"12\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"303.3333
+    598.3334\" name=\"Random Sequence\" description=\"Executes all its children in
+    a random sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <RandomSequenceNode id=\"12\" />\r\n         
+    <RepeatDecorator id=\"1\" />\r\n        </data>\r\n      </_data>\r\n    </RandomSequenceNode>\r\n   
+    <SubbehaviorNode id=\"4\">\r\n      <_data>\r\n        <data breakpoint=\"0\"
+    selected=\"False\" position=\"240.6579 786.4998\" name=\"Wander\" description=\"\"
+    cardinality=\"-1\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <SubbehaviorNode id=\"4\" />\r\n          <RandomSequenceNode id=\"12\" />\r\n       
+    </data>\r\n      </_data>\r\n    </SubbehaviorNode>\r\n    <SequenceNode id=\"7\">\r\n     
+    <_data>\r\n        <data breakpoint=\"0\" selected=\"False\" position=\"443.5154
+    786.5005\" name=\"Sequence\" description=\"Executes all its children in sequence
+    until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\r\n         
+    <BehaviorTree id=\"0\" />\r\n          <SequenceNode id=\"7\" />\r\n         
+    <RandomSequenceNode id=\"12\" />\r\n        </data>\r\n      </_data>\r\n   
+    </SequenceNode>\r\n    <ActionNode id=\"11\">\r\n      <_data>\r\n        <data
+    breakpoint=\"0\" selected=\"True\" position=\"312.3245 973.1666\" name=\"Custom/MoveCloseToGameObject\"
+    description=\"Moves the game object towards a given target by using a NavMeshAgent\"
+    cardinality=\"0\" hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n         
+    <ActionNode id=\"11\" />\r\n          <SequenceNode id=\"7\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n    <ActionNode id=\"10\">\r\n      <_data>\r\n       
+    <data breakpoint=\"0\" selected=\"False\" position=\"611.373 978.4054\" name=\"Basic/WaitForSeconds\"
+    description=\"Action that success after a period of time.\" cardinality=\"0\"
+    hasParent=\"True\">\r\n          <BehaviorTree id=\"0\" />\r\n          <ActionNode
+    id=\"10\" />\r\n          <SequenceNode id=\"7\" />\r\n        </data>\r\n     
+    </_data>\r\n    </ActionNode>\r\n  </editorInfo>\r\n</BehaviorBricks>"
+  zoom: 0.6
+  subslist:
+  - {fileID: 11400000, guid: 9efcdebb55c03cd4098c14bdfe508ada, type: 2}
+  _guid: f2ce0070c84fd8644882fa83776c9387

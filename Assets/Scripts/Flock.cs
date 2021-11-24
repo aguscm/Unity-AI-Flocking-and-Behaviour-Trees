@@ -6,7 +6,7 @@ public class Flock : MonoBehaviour {
     public FlockManager myManager;
     // Prefab initial speed;
     float speed;
-    // Bool used to check the swim limits
+    // Bool used to check the limits
     bool turning = false;
 
     void Start() {
@@ -54,14 +54,9 @@ public class Flock : MonoBehaviour {
 
                 speed = Random.Range(myManager.minSpeed, myManager.maxSpeed);
             }
-
-            // 20& chance of applying the flocking rules
-            if (Random.Range(0.0f, 100.0f) < 20.0f) {
-
-                ApplyRules();
-            }
         }
 
+        //ApplyRules();
         transform.Translate(0.0f, 0.0f, Time.deltaTime * speed);
     }
 
